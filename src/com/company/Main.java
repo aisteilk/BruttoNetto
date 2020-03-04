@@ -5,18 +5,18 @@ public class Main {
     public static void main(String[] args) {
         int nettoPreis;
         nettoPreis = 200;
-        float steuersatz = 0.05f;
-        float bruttoPreis = nettoPreis + nettoPreis * steuersatz;
+        double steuersatz = 0.05;
+        double bruttoPreis = nettoPreis + nettoPreis * steuersatz;
         System.out.println("Ergebnis: "+ bruttoPreis + "€");
 
-        float maximalWert = 0.2f;
+        double maximalWert = 0.04;
 
         boolean zuHoch;
-        zuHoch = maximalWert > steuersatz;
+        zuHoch = steuersatz > maximalWert;
         System.out.println("Steuer sind zu hoch " + zuHoch );
 
-        boolean zuNiedrig = maximalWert == steuersatz;
-        System.out.print(zuNiedrig);
+        boolean istUngleich = maximalWert != steuersatz;
+        System.out.print(istUngleich);
 
     }
 }
